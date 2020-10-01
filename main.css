@@ -59,7 +59,7 @@ a {
     display: flex;
     justify-items: flex-start;
     background-color: black;
-    padding: 0 10%;
+    padding: 0 40px;
     align-items: center;
     position: fixed;
     top: 0;
@@ -106,10 +106,20 @@ a {
 }
 
 .home {
+    display: flex;
+    flex-direction: column;
     background-color: darkslategrey;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;  
-    gap: 20px;
+    gap: 30px;
+}
+
+.home_content{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 .heroImage {
@@ -137,11 +147,45 @@ a {
 }
 
 .about {
-    background-image: url(https://picsum.photos/seed/190/900);
-    flex-direction: column;
-    justify-content: flex-start;
-
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "  box1 box2 "
+    "  box3 box4 "
+    ;
 }
+
+.box {
+    padding: 30px;
+}
+
+.about_box1 {
+    grid-template: box1;
+    background-image: url(https://picsum.photos/seed/120/600);ba
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 200px;
+}
+
+.about_box2 {
+    grid-template: box2;
+    text-align: justify;
+}
+
+.about_box3 {
+    grid-template: box3;
+    text-align: justify;
+}
+
+.about_box4 {
+    grid-template: box4;
+    background-image: url(https://picsum.photos/seed/118/600);
+    background-size: cover;
+    background-position: center;
+    border-radius: 200px 0 0 0;
+}
+
 
 .gallery {
     background-image: url(https://picsum.photos/seed/191/900);
@@ -166,7 +210,7 @@ a {
 
 .footer {
     width: 100vw;
-    height: 40vh;
+    height: 45vh;
     display: flex;
     padding: 0 10%;
     color: white;
@@ -229,6 +273,7 @@ a {
     position: sticky;
     top: 10vh;
     left: 0;
+    z-index: 80;
 }
 
 @keyframes bottomToTop {
