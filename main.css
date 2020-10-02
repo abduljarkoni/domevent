@@ -162,10 +162,11 @@ a {
 
 .about_box1 {
     grid-template: box1;
-    background-image: url(https://picsum.photos/seed/120/600);ba
+    background-image: url(https://picsum.photos/seed/120/600);
     background-size: cover;
     background-position: center;
     border-radius: 0 0 200px;
+    background-attachment: fixed;
 }
 
 .about_box2 {
@@ -183,15 +184,37 @@ a {
     background-image: url(https://picsum.photos/seed/118/600);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     border-radius: 200px 0 0 0;
 }
 
 
 .gallery {
-    background-image: url(https://picsum.photos/seed/191/900);
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    text-align: center;
+    height: auto; 
 }
+
+.wrapper_gallery{
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    padding: 40px 40px;
+}
+
+.gallery_title {
+    font-size: 3rem;
+}
+
+.wrapper_gallery img {
+    transition-duration: .4s;
+}
+
+.wrapper_gallery img:hover {
+    border-radius: 200px;
+}
+
 .galleryIcon {
     font-size: 8rem;
     color: blue;

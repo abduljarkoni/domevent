@@ -41,3 +41,23 @@ const closeAlert = () => {
     aboutAlert.style.display = 'none'
 
 }
+
+// KITA AMBIL DULU ELEMENT YANG DIINGINKAN
+let gallery = document.getElementById('wrapper_gallery')
+
+//kita inject elementnya dengan syntax HTML
+//javascript punya 3 tipe data string 
+// gallery.innerHTML += `
+
+// <img src="https://picsum.photos/seed/29/300" />
+
+// `
+
+//belajar fungsi pengulangan bernama "FOR" 
+// FOR adalah sebauh function
+
+for (var i = 0; i < 36; i++) {
+    gallery.innerHTML += `
+        <img src='https://picsum.photos/seed/${100 + i}/200' alt='gambar ${i}'/>
+    `
+}
